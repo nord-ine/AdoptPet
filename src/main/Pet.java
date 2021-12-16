@@ -11,6 +11,7 @@ public class Pet
     private int age = 1;
     private String color = "";
     private String name = "";
+    private Person owner;
     /**
      * Constructeur d'objets de classe Pet
      */
@@ -40,5 +41,13 @@ public class Pet
     public String getName(){
         return this.name;
     }
-     
+
+
+    public void setOwner(Person p){
+        this.owner = p;
+    }
+    public Person getOwner(){
+        return this.owner;
+    }
+
 }

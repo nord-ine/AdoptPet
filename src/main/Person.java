@@ -10,6 +10,8 @@ public class Person
 {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
 
+    private Pet myPet;
+
     /**
      * Constructeur d'objets de classe Human
      */
@@ -19,8 +21,16 @@ public class Person
         
     }
 
-    
-    public void giveNameToPet(Pet p,String name){
-        p.setName(name);
+    public void adoptPet(){
+        this.myPet= new Pet();
+        this.myPet.setOwner(this);
+    }
+
+    public Pet getPet(){
+        return this.myPet;
+    }
+    public void giveNameToPet(String name){
+        this.myPet.setName(name);
     }
 }
+

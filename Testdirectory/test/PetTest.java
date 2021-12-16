@@ -80,19 +80,13 @@ public class PetTest
         assertEquals(3, cat.getAge());
     }
 
-    @Test
-    public void testFeedPet()
-    {
-        Pet shibainu = new Pet();
-    }
 
     @Test
     public void testSetName()
     {
         Pet cat = new Pet();
-        cat.setName("");
-        cat.setName("h");
-        assertEquals("j", cat.getName());
+        cat.setName("myaww");
+        assertEquals("myaww", cat.getName());
     }
 }
 

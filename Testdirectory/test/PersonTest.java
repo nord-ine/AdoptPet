@@ -34,13 +34,6 @@ import org.junit.jupiter.api.Test;
  */
 public class PersonTest
 {
-    // Définissez ici les variables d'instance nécessaires à vos engagements;
-    // Vous pouvez également les saisir automatiquement du présentoir
-    // à l'aide du menu contextuel "Présentoir --> Engagements".
-    // Notez cependant que ce dernier ne peut saisir les objets primitifs
-    // du présentoir (les objets sans constructeur, comme int, float, etc.).
-    protected double fValeur1;
-    protected double fValeur2;
 
     /**
      * Constructeur de la classe-test HumanTest
@@ -57,9 +50,7 @@ public class PersonTest
     @BeforeEach
     public void setUp() // throws java.lang.Exception
     {
-        // Initialisez ici vos engagements
-        fValeur1= 2.0;
-        fValeur2= 3.0;
+
     }
 
     /**
@@ -73,22 +64,16 @@ public class PersonTest
         //Libérez ici les ressources engagées par setUp()
     }
 
-    @Test
-    public void testgiveNameToPet()
-    {
-        Pet cat = new Pet();
-        Person h = new Person();
-        h.giveNameToPet(cat, "myaw");
-        assertEquals("myaw", cat.getName());
-    }
+
 
     @Test
     public void testGiveNametoPet()
     {
-        Pet shibainu = new Pet();
+        //Pet shibainu = new Pet();
         Person elon = new Person();
-        elon.giveNameToPet(shibainu, "doge");
-        assertEquals("doge", shibainu.getName());
+        elon.adoptPet();
+        elon.giveNameToPet("doge");
+        assertEquals("doge", elon.getPet().getName());
     }
 }
 
