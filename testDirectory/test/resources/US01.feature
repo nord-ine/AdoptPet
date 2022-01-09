@@ -21,7 +21,7 @@ Afin de pouvoir me presenter
   Scenario Outline: presentation du dieu
     Given un dieu
     When dieu se presente
-    Then il retourn une phrase contenant son name et son feature
+    Then il retourne une phrase contenant son name et son feature
 
     Examples: 
       | dieu      | name  | feature  |         sentence           |
