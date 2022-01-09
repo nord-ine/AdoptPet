@@ -1,34 +1,29 @@
 package main;
 
 /**
- * Décrivez votre classe Human ici.
- *
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * Ma classe Person represente un humain
  */
 public class Person {
-    // variables d'instance - remplacez l'exemple qui suit par le vôtre
 
     private Pet myPet;
 
     /**
-     * Constructeur d'objets de classe Human
+     * Constructeur d'objets de classe Person
      */
-    public Person()
-    {
+    public Person() {
         // initialisation des variables d'instance
-
     }
 
-    public void adoptPet(){
-        this.myPet= new Pet();
+    public void adoptPet() {
+        this.myPet = new Pet();
         this.myPet.setOwner(this);
     }
 
-    public Pet getPet(){
+    public Pet getPet() {
         return this.myPet;
     }
-    public void giveNameToPet(String name){
+
+    public void giveNameToPet(String name) {
         this.myPet.setName(name);
     }
 }
