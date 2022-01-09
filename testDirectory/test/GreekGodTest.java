@@ -1,7 +1,8 @@
-package main;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+import main.GreekGod;
+import main.MyAssociationException;
+import main.Weapon;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
