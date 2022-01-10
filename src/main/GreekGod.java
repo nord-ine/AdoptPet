@@ -46,8 +46,12 @@ public class GreekGod {
      * @throws Exception
      */
     public void setWeapon(Weapon weapon) throws Exception {
-        this.weapon = weapon;
-        this.weapon.setGod(this);
+        if (weapon.getGod() == null) {
+            this.weapon = weapon;
+            this.weapon.setGod(this);
+        } else {
+            throw new MyAssociationException();
+        }
     }
 
     /**

@@ -35,4 +35,14 @@ class GodPersonTest {
         this.god.giveNameToPet("bird");
         assertEquals(this.god.getPerson().getPet().getName(), "bird");
     }
+
+    @Test
+    public void testToString() {
+        assertPresentationGod();
+    }
+
+    public void assertPresentationGod() {
+        assertTrue(this.god.toString().contains(this.god.getName()));
+        assertTrue(this.god.toString().contains(this.god.getFeature()));
+    }
 }

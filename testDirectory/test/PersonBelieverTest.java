@@ -1,9 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
 import main.GreekGod;
-import main.Person;
 import main.PersonBeliever;
-import main.Pet;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -46,7 +44,7 @@ public class PersonBelieverTest {
 
     @Test
     public void testGetGod() {
-        assertEquals(null, this.person.getGod());
+        assertNull(this.person.getGod());
     }
 
     @Test
@@ -57,10 +55,13 @@ public class PersonBelieverTest {
 
     public void assertEqualsGod() {
 
-        assertEquals("zeus", person.getGod().getName());
-        assertEquals("foudre", person.getGod().getFeature());
-        assertEquals(null, person.getGod().getWeapon());
+        assertEquals("zeus", this.person.getGod().getName());
+        assertEquals("foudre", this.person.getGod().getFeature());
+        assertEquals(null, this.person.getGod().getWeapon());
     }
 
-
+    @Test
+    public void testGetPet() {
+        assertNull(this.person.getPet());
+    }
 }

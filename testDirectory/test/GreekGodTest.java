@@ -50,37 +50,33 @@ class GreekGodTest {
     }
 
     public void assertPresentationGod() {
-        assertTrue(god.toString().contains(god.getName()));
-        assertTrue(god.toString().contains(god.getFeature()));
+        assertTrue(this.god.toString().contains(this.god.getName()));
+        assertTrue(this.god.toString().contains(this.god.getFeature()));
     }
 
     @Test
     public void testGetName() {
-        assertEquals("Hades", god.getName());
-    }
-
-    @Test
-    public void testSetName() {
-        assertEquals("Hades", god.getName());
+        assertEquals("Hades", this.god.getName());
     }
 
     @Test
     public void testSetWeapon() throws Exception {
-        assertEquals(god.getWeapon(), null);
-        god.setWeapon(weapon);
+        assertEquals(this.god.getWeapon(), null);
+        this.god.setWeapon(this.weapon);
         assertAssociationGodWeapon();
 
         try {
-            god2.setWeapon(weapon);
+            this.god2.setWeapon(this.weapon);
             fail();
         } catch (MyAssociationException e) {
-            assertTrue(true);
+            assertNull(this.god2.getWeapon());
+            assertEquals(e.getMessage(), "Weapon has already a God");
         }
 
     }
 
     public void assertAssociationGodWeapon() {
-        assertEquals(god.getWeapon(), weapon);
-        assertEquals(weapon.getGod(), god);
+        assertEquals(this.god.getWeapon().getName(), this.weapon.getName());
+        assertEquals(this.weapon.getGod(), this.god);
     }
 }
