@@ -51,6 +51,8 @@ public class PersonBelieverTest {
     public void testSetGod() {
         this.person.setGod(this.god);
         assertEqualsGod();
+        this.person.setGod(null);
+        assertNull(this.person.getGod());
     }
 
     public void assertEqualsGod() {
