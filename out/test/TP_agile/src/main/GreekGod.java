@@ -1,0 +1,64 @@
+package main;
+
+/**
+ * Ma classe GreekGod represente un dieu grec
+ */
+public class GreekGod {
+
+    private String name;
+    private String feature;
+    private Weapon weapon;
+
+    /**
+     * Constructeur d'objets de classe GreekGod
+     */
+    public GreekGod(String name, String feature) {
+        // initialisation des variables d'instance
+        this.setName(name);
+        this.setFeature(feature);
+        this.weapon = null;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getFeature() {
+        return this.feature;
+    }
+
+    public void setFeature(String feature) {
+        this.feature = feature;
+    }
+
+    public Weapon getWeapon() {
+        return this.weapon;
+    }
+
+    /**
+     * Methode pour realiser l'association entre un god
+     * et une arme
+     *
+     * @throws Exception
+     */
+    public void setWeapon(Weapon weapon) throws Exception {
+        if (weapon.getGod() == null) {
+            this.weapon = weapon;
+            this.weapon.setGod(this);
+        } else {
+            throw new MyAssociationException();
+        }
+    }
+
+    /**
+     * Methode pour presenter le dieu
+     */
+    public String toString() {
+        return "I am " + getName() + ", the god of " + getFeature();
+    }
+
+}
