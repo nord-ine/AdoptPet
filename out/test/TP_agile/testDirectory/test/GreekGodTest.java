@@ -66,6 +66,13 @@ class GreekGodTest {
         assertAssociationGodWeapon();
 
         try {
+            this.weapon.setGod(this.god2);
+            fail();
+        } catch (MyAssociationException e) {
+            assertEquals(this.weapon, this.god.getWeapon());
+        }
+
+        try {
             this.god2.setWeapon(this.weapon);
             fail();
         } catch (MyAssociationException e) {
