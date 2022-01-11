@@ -14,8 +14,8 @@ public class WeaponStepDefs {
         this.name = "eternal spear";
     }
 
-    @When("instanciation")
-    public void instanciation() {
+    @When("instanciation arme")
+    public void instanciation_arme() {
         this.weapon = new Weapon(this.name);
     }
 

@@ -14,6 +14,6 @@ public class MyAssociationException extends Exception {
     }
 
     public String getMessage() {
-        return "Weapon has already a God";
+        return "Weapon and God cannot be associated";
     }
 }

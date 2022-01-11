@@ -70,7 +70,7 @@ class GreekGodTest {
             fail();
         } catch (MyAssociationException e) {
             assertNull(this.god2.getWeapon());
-            assertEquals(e.getMessage(), "Weapon has already a God");
+            assertEquals(e.getMessage(), "Weapon and God cannot be associated");
         }
 
     }

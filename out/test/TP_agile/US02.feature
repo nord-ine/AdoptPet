@@ -12,7 +12,7 @@ Afin que un seul dieu puisse m"\\"utiliser
   @tag1
   Scenario Outline: instancier une arme
   	Given name
-    When instanciation 
+    When instanciation arme
     Then creation arme avec name
     
     Examples: 

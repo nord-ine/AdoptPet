@@ -28,5 +28,4 @@ public class GiveNameToPetCucumber {
         assertEquals("myaw", this.person.getPet().getName());
     }
 
-
 }

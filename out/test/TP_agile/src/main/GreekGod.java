@@ -46,7 +46,7 @@ public class GreekGod {
      * @throws Exception
      */
     public void setWeapon(Weapon weapon) throws Exception {
-        if (weapon.getGod() == null) {
+        if (this.getWeapon() == null && weapon.getGod() == null) {
             this.weapon = weapon;
             this.weapon.setGod(this);
         } else {
