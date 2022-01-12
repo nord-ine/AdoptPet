@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import main.Person;
 import main.Pet;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,4 +51,21 @@ public class PetTest {
         this.cat.setName("myaww");
         assertEquals("myaww", this.cat.getName());
     }
+
+    @Test
+    public void testSetOwner(){
+        Person owner = new Person();
+
+        this.cat.setOwner(owner);
+
+        assertEquals(owner,this.cat.getOwner());
+    }
+
+    @Test
+    public void testSetType(){
+        this.cat.setType("cat Persan");
+        assertEquals("cat Persan",this.cat.getType());
+    }
+
+
 }

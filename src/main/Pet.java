@@ -6,7 +6,7 @@ package main;
 public class Pet {
 
     private int age = 1;
-    private String color = "";
+    private String type = "";
     private String name = "";
     private Person owner;
 
@@ -21,16 +21,16 @@ public class Pet {
         return this.age;
     }
 
-    public String getColor() {
-        return this.color;
+    public String getType() {
+        return this.type;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setName(String name) {
