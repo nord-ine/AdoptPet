@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
 import static org.junit.jupiter.api.Assertions.*;
 
 import main.Pet;
@@ -9,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Classe-test PetTest.
+<<<<<<< HEAD
  *
  * @author  (votre nom)
  * @version (un numéro de version ou une date)
@@ -40,16 +44,27 @@ public class PetTest
     // du présentoir (les objets sans constructeur, comme int, float, etc.).
     protected double fValeur1;
     protected double fValeur2;
+=======
+ */
+public class PetTest {
+
+    private Pet cat;
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
 
     /**
      * Constructeur de la classe-test PetTest
      */
+<<<<<<< HEAD
     public PetTest()
     {
+=======
+    public PetTest() {
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
     }
 
     /**
      * Met en place les engagements.
+<<<<<<< HEAD
      *
      * Méthode appelée avant chaque appel de méthode de test.
      */
@@ -59,10 +74,19 @@ public class PetTest
         // Initialisez ici vos engagements
         fValeur1= 2.0;
         fValeur2= 3.0;
+=======
+     * <p>
+     * Méthode appelée avant chaque appel de méthode de test.
+     */
+    @BeforeEach
+    public void setUp() {
+        cat = new Pet();
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
     }
 
     /**
      * Supprime les engagements
+<<<<<<< HEAD
      *
      * Méthode appelée après chaque appel de méthode de test.
      */
@@ -78,10 +102,25 @@ public class PetTest
         Pet cat = new Pet();
         cat.setAge(3);
         assertEquals(3, cat.getAge());
+=======
+     * <p>
+     * Méthode appelée après chaque appel de méthode de test.
+     */
+    @AfterEach
+    public void tearDown() {
+
+    }
+
+    @Test
+    public void testSetAge() {
+        this.cat.setAge(3);
+        assertEquals(3, this.cat.getAge());
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
     }
 
 
     @Test
+<<<<<<< HEAD
     public void testSetName()
     {
         Pet cat = new Pet();
@@ -92,3 +131,10 @@ public class PetTest
 
 
 
+=======
+    public void testSetName() {
+        this.cat.setName("myaww");
+        assertEquals("myaww", this.cat.getName());
+    }
+}
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
