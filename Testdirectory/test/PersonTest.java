@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
 import static org.junit.jupiter.api.Assertions.*;
 
 import main.Person;
@@ -10,6 +13,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Classe-test HumanTest.
+<<<<<<< HEAD
  *
  * @author  (votre nom)
  * @version (un numéro de version ou une date)
@@ -34,16 +38,27 @@ import org.junit.jupiter.api.Test;
  */
 public class PersonTest
 {
+=======
+ */
+public class PersonTest {
+    
+    private Person elon;
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
 
     /**
      * Constructeur de la classe-test HumanTest
      */
+<<<<<<< HEAD
     public PersonTest()
     {
+=======
+    public PersonTest() {
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
     }
 
     /**
      * Met en place les engagements.
+<<<<<<< HEAD
      *
      * Méthode appelée avant chaque appel de méthode de test.
      */
@@ -51,10 +66,19 @@ public class PersonTest
     public void setUp() // throws java.lang.Exception
     {
 
+=======
+     * <p>
+     * Méthode appelée avant chaque appel de méthode de test.
+     */
+    @BeforeEach
+    public void setUp() {
+        elon = new Person();
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
     }
 
     /**
      * Supprime les engagements
+<<<<<<< HEAD
      *
      * Méthode appelée après chaque appel de méthode de test.
      */
@@ -78,3 +102,20 @@ public class PersonTest
 }
 
 
+=======
+     * <p>
+     * Méthode appelée après chaque appel de méthode de test.
+     */
+    @AfterEach
+    public void tearDown() {
+    }
+
+
+    @Test
+    public void testGiveNametoPet() {
+        this.elon.adoptPet();
+        this.elon.giveNameToPet("doge");
+        assertEquals("doge", this.elon.getPet().getName());
+    }
+}
+>>>>>>> 5170708b623db346bcdc1a9343fce7cea67162bb
