@@ -16,6 +16,10 @@ public class Pet {
     public Pet() {
         // initialisation des variables d'instance
     }
+    public Pet(String type) {
+        this.type=type;
+        // initialisation des variables d'instance
+    }
 
     public int getAge() {
         return this.age;

@@ -13,7 +13,7 @@ public class GiveNameToPetCucumber {
     public void my_new_pet() {
         // Write code here that turns the phrase above into concrete actions
         this.person = new Person();
-        this.person.adoptPet();
+        this.person.adoptPet("dog");
     }
 
     @When("I give a name to the pet")

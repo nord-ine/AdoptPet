@@ -14,8 +14,8 @@ public class Person {
         // initialisation des variables d'instance
     }
 
-    public void adoptPet() {
-        this.myPet = new Pet();
+    public void adoptPet(String type) {
+        this.myPet = new Pet(type);
         this.myPet.setOwner(this);
     }
 

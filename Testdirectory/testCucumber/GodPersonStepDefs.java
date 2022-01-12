@@ -23,7 +23,7 @@ public class GodPersonStepDefs {
 
     @Then("god peut adpoter un animal")
     public void godPeutAdpoterUnAnimal() {
-        this.god.adoptPet();
+        this.god.adoptPet("bird");
         this.god.giveNameToPet("bird");
         assertEquals(this.god.getPerson().getPet().getName(), "bird");
     }

@@ -38,10 +38,16 @@ public class PersonTest {
     public void tearDown() {
     }
 
+    @Test
+    public void testAdoptPet() {
+        this.elon.adoptPet("dog");
+        assertNotNull(this.elon.getPet());
+        assertEquals("dog", this.elon.getPet().getType());
+    }
 
     @Test
     public void testGiveNametoPet() {
-        this.elon.adoptPet();
+        this.elon.adoptPet("dog");
         this.elon.giveNameToPet("doge");
         assertEquals("doge", this.elon.getPet().getName());
     }

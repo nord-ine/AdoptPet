@@ -2,7 +2,7 @@ package main;
 
 public class GodPerson extends GreekGod {
 
-    private Person person;
+    private final Person person;
 
     public GodPerson(String name, String feature) {
         super(name, feature);
@@ -13,8 +13,8 @@ public class GodPerson extends GreekGod {
         return this.person;
     }
 
-    public void adoptPet() {
-        this.person.adoptPet();
+    public void adoptPet(String type) {
+        this.person.adoptPet(type);
     }
 
 

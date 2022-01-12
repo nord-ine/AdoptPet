@@ -25,15 +25,15 @@ class GodPersonTest {
 
     @Test
     void adoptPet() {
-        this.god.getPerson().adoptPet();
+        this.god.getPerson().adoptPet("cat");
         assertNotNull(this.god.getPerson().getPet());
     }
 
     @Test
     void giveNameToPet() {
-        this.god.adoptPet();
-        this.god.giveNameToPet("bird");
-        assertEquals(this.god.getPerson().getPet().getName(), "bird");
+        this.god.adoptPet("bird");
+        this.god.giveNameToPet("mybird");
+        assertEquals(this.god.getPerson().getPet().getName(), "mybird");
     }
 
     @Test
